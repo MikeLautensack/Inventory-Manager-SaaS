@@ -19,7 +19,7 @@ export default function EmailSignIn({
   redirectMethod,
   disableButton
 }: EmailSignInProps) {
-  const router = redirectMethod === 'client' ? useRouter() : null;
+  const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -69,7 +69,7 @@ export default function EmailSignIn({
           </p>
           <p>
             <Link href="/signin/signup" className="font-light text-sm">
-              Don't have an account? Sign up
+              {`Don't have an account? Sign up`}
             </Link>
           </p>
         </>
