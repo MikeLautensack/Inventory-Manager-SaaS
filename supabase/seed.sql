@@ -24,7 +24,9 @@ SET row_security = off;
 
 INSERT INTO "auth"."audit_log_entries" ("instance_id", "id", "payload", "created_at", "ip_address") VALUES
 	('00000000-0000-0000-0000-000000000000', 'bdd1ee6d-8614-43a6-b4a6-9fe6721a5b61', '{"action":"user_signedup","actor_id":"8695beda-eb6a-453d-96a6-3c6a663f115d","actor_name":"Mike Lautensack","actor_username":"mikelautensack100@gmail.com","actor_via_sso":false,"log_type":"team","traits":{"provider":"github"}}', '2025-01-16 00:37:23.365088+00', ''),
-	('00000000-0000-0000-0000-000000000000', 'b03e6a6c-740d-467c-932a-b01306981ebe', '{"action":"login","actor_id":"8695beda-eb6a-453d-96a6-3c6a663f115d","actor_name":"Mike Lautensack","actor_username":"mikelautensack100@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider_type":"github"}}', '2025-01-16 00:37:24.647942+00', '');
+	('00000000-0000-0000-0000-000000000000', 'b03e6a6c-740d-467c-932a-b01306981ebe', '{"action":"login","actor_id":"8695beda-eb6a-453d-96a6-3c6a663f115d","actor_name":"Mike Lautensack","actor_username":"mikelautensack100@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider_type":"github"}}', '2025-01-16 00:37:24.647942+00', ''),
+	('00000000-0000-0000-0000-000000000000', 'eeb1476e-0897-4c9b-b79a-c7a31744cba3', '{"action":"login","actor_id":"8695beda-eb6a-453d-96a6-3c6a663f115d","actor_name":"Mike Lautensack","actor_username":"mikelautensack100@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"github"}}', '2025-01-16 20:20:08.467864+00', ''),
+	('00000000-0000-0000-0000-000000000000', 'c21c557a-90e9-42d7-8e00-ff842eec20c0', '{"action":"login","actor_id":"8695beda-eb6a-453d-96a6-3c6a663f115d","actor_name":"Mike Lautensack","actor_username":"mikelautensack100@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider_type":"github"}}', '2025-01-16 20:20:09.36105+00', '');
 
 
 --
@@ -38,7 +40,7 @@ INSERT INTO "auth"."audit_log_entries" ("instance_id", "id", "payload", "created
 --
 
 INSERT INTO "auth"."users" ("instance_id", "id", "aud", "role", "email", "encrypted_password", "email_confirmed_at", "invited_at", "confirmation_token", "confirmation_sent_at", "recovery_token", "recovery_sent_at", "email_change_token_new", "email_change", "email_change_sent_at", "last_sign_in_at", "raw_app_meta_data", "raw_user_meta_data", "is_super_admin", "created_at", "updated_at", "phone", "phone_confirmed_at", "phone_change", "phone_change_token", "phone_change_sent_at", "email_change_token_current", "email_change_confirm_status", "banned_until", "reauthentication_token", "reauthentication_sent_at", "is_sso_user", "deleted_at", "is_anonymous") VALUES
-	('00000000-0000-0000-0000-000000000000', '8695beda-eb6a-453d-96a6-3c6a663f115d', 'authenticated', 'authenticated', 'mikelautensack100@gmail.com', NULL, '2025-01-16 00:37:23.367337+00', NULL, '', NULL, '', NULL, '', '', NULL, '2025-01-16 00:37:24.648443+00', '{"provider": "github", "providers": ["github"]}', '{"iss": "https://api.github.com", "sub": "110644605", "name": "Mike Lautensack", "email": "mikelautensack100@gmail.com", "full_name": "Mike Lautensack", "user_name": "MikeLautensack", "avatar_url": "https://avatars.githubusercontent.com/u/110644605?v=4", "provider_id": "110644605", "email_verified": true, "phone_verified": false, "preferred_username": "MikeLautensack"}', NULL, '2025-01-16 00:37:23.327131+00', '2025-01-16 00:37:24.658534+00', NULL, NULL, '', '', NULL, '', 0, NULL, '', NULL, false, NULL, false);
+	('00000000-0000-0000-0000-000000000000', '8695beda-eb6a-453d-96a6-3c6a663f115d', 'authenticated', 'authenticated', 'mikelautensack100@gmail.com', NULL, '2025-01-16 00:37:23.367337+00', NULL, '', NULL, '', NULL, '', '', NULL, '2025-01-16 20:20:09.361581+00', '{"provider": "github", "providers": ["github"]}', '{"iss": "https://api.github.com", "sub": "110644605", "name": "Mike Lautensack", "email": "mikelautensack100@gmail.com", "full_name": "Mike Lautensack", "user_name": "MikeLautensack", "avatar_url": "https://avatars.githubusercontent.com/u/110644605?v=4", "provider_id": "110644605", "email_verified": true, "phone_verified": false, "preferred_username": "MikeLautensack"}', NULL, '2025-01-16 00:37:23.327131+00', '2025-01-16 20:20:09.381012+00', NULL, NULL, '', '', NULL, '', 0, NULL, '', NULL, false, NULL, false);
 
 
 --
@@ -46,7 +48,7 @@ INSERT INTO "auth"."users" ("instance_id", "id", "aud", "role", "email", "encryp
 --
 
 INSERT INTO "auth"."identities" ("provider_id", "user_id", "identity_data", "provider", "last_sign_in_at", "created_at", "updated_at", "id") VALUES
-	('110644605', '8695beda-eb6a-453d-96a6-3c6a663f115d', '{"iss": "https://api.github.com", "sub": "110644605", "name": "Mike Lautensack", "email": "mikelautensack100@gmail.com", "full_name": "Mike Lautensack", "user_name": "MikeLautensack", "avatar_url": "https://avatars.githubusercontent.com/u/110644605?v=4", "provider_id": "110644605", "email_verified": true, "phone_verified": false, "preferred_username": "MikeLautensack"}', 'github', '2025-01-16 00:37:23.358127+00', '2025-01-16 00:37:23.35819+00', '2025-01-16 00:37:23.35819+00', '49545d99-0c50-4578-b849-b3382e8d132f');
+	('110644605', '8695beda-eb6a-453d-96a6-3c6a663f115d', '{"iss": "https://api.github.com", "sub": "110644605", "name": "Mike Lautensack", "email": "mikelautensack100@gmail.com", "full_name": "Mike Lautensack", "user_name": "MikeLautensack", "avatar_url": "https://avatars.githubusercontent.com/u/110644605?v=4", "provider_id": "110644605", "email_verified": true, "phone_verified": false, "preferred_username": "MikeLautensack"}', 'github', '2025-01-16 00:37:23.358127+00', '2025-01-16 00:37:23.35819+00', '2025-01-16 20:20:08.440582+00', '49545d99-0c50-4578-b849-b3382e8d132f');
 
 
 --
@@ -60,7 +62,8 @@ INSERT INTO "auth"."identities" ("provider_id", "user_id", "identity_data", "pro
 --
 
 INSERT INTO "auth"."sessions" ("id", "user_id", "created_at", "updated_at", "factor_id", "aal", "not_after", "refreshed_at", "user_agent", "ip", "tag") VALUES
-	('092483ff-6422-41dc-bde8-d9740185f804', '8695beda-eb6a-453d-96a6-3c6a663f115d', '2025-01-16 00:37:24.64852+00', '2025-01-16 00:37:24.64852+00', NULL, 'aal1', NULL, NULL, 'node', '12.74.93.3', NULL);
+	('092483ff-6422-41dc-bde8-d9740185f804', '8695beda-eb6a-453d-96a6-3c6a663f115d', '2025-01-16 00:37:24.64852+00', '2025-01-16 00:37:24.64852+00', NULL, 'aal1', NULL, NULL, 'node', '12.74.93.3', NULL),
+	('9032b920-41a0-46ed-9b9d-e37bc6c0cd60', '8695beda-eb6a-453d-96a6-3c6a663f115d', '2025-01-16 20:20:09.362639+00', '2025-01-16 20:20:09.362639+00', NULL, 'aal1', NULL, NULL, 'node', '12.74.93.3', NULL);
 
 
 --
@@ -68,7 +71,8 @@ INSERT INTO "auth"."sessions" ("id", "user_id", "created_at", "updated_at", "fac
 --
 
 INSERT INTO "auth"."mfa_amr_claims" ("session_id", "created_at", "updated_at", "authentication_method", "id") VALUES
-	('092483ff-6422-41dc-bde8-d9740185f804', '2025-01-16 00:37:24.658989+00', '2025-01-16 00:37:24.658989+00', 'oauth', 'f1c585db-9605-47ae-a7bf-0f6108af07fd');
+	('092483ff-6422-41dc-bde8-d9740185f804', '2025-01-16 00:37:24.658989+00', '2025-01-16 00:37:24.658989+00', 'oauth', 'f1c585db-9605-47ae-a7bf-0f6108af07fd'),
+	('9032b920-41a0-46ed-9b9d-e37bc6c0cd60', '2025-01-16 20:20:09.381475+00', '2025-01-16 20:20:09.381475+00', 'oauth', '5c6debf4-bd0a-4a5d-8657-03f54a1b2b30');
 
 
 --
@@ -94,7 +98,8 @@ INSERT INTO "auth"."mfa_amr_claims" ("session_id", "created_at", "updated_at", "
 --
 
 INSERT INTO "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked", "created_at", "updated_at", "parent", "session_id") VALUES
-	('00000000-0000-0000-0000-000000000000', 1, 'uRRgFsLlIBS_pasfjYhmFw', '8695beda-eb6a-453d-96a6-3c6a663f115d', false, '2025-01-16 00:37:24.6531+00', '2025-01-16 00:37:24.6531+00', NULL, '092483ff-6422-41dc-bde8-d9740185f804');
+	('00000000-0000-0000-0000-000000000000', 1, 'uRRgFsLlIBS_pasfjYhmFw', '8695beda-eb6a-453d-96a6-3c6a663f115d', false, '2025-01-16 00:37:24.6531+00', '2025-01-16 00:37:24.6531+00', NULL, '092483ff-6422-41dc-bde8-d9740185f804'),
+	('00000000-0000-0000-0000-000000000000', 2, 'L0rrGwBgB8csbUB-W8LggQ', '8695beda-eb6a-453d-96a6-3c6a663f115d', false, '2025-01-16 20:20:09.365617+00', '2025-01-16 20:20:09.365617+00', NULL, '9032b920-41a0-46ed-9b9d-e37bc6c0cd60');
 
 
 --
@@ -134,7 +139,31 @@ INSERT INTO "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "r
 
 
 --
+-- Data for Name: customers; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- Data for Name: products; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- Data for Name: prices; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
 -- Data for Name: subscriptions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 
@@ -173,7 +202,7 @@ INSERT INTO "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "r
 -- Name: refresh_tokens_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: supabase_auth_admin
 --
 
-SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1, true);
+SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 2, true);
 
 
 --
