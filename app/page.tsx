@@ -14,6 +14,10 @@ export default async function PricingPage() {
     getSubscription(supabase)
   ]);
 
+  console.log(`Testing user: ${JSON.stringify(user)}`);
+  console.log(`Testing products: ${JSON.stringify(products)}`);
+  console.log(`Testing subscription: ${JSON.stringify(subscription)}`);
+
   return (
     <Pricing
       user={user}
