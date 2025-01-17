@@ -1,1 +1,1 @@
-export {};
+export type Tables<T> = any;
